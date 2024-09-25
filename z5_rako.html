@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h2 style="color:red">wykonał: Aleksander Rakoczy mój numer w dzienniku 20, czyli mam układ [(20) mod 4=0] układ 4</h2>
+
+<button onclick="WinOpen_rako('1')">grafika1</button>
+<button onclick="WinOpen_rako('2')">grafika2</button>
+<button onclick="WinOpen_rako('3')">grafika3</button>
+<button onclick="WinOpen_rako('4')">grafika4</button>
+</body>
+<script>
+    function WinOpen_rako(whichWindow) {
+        if (whichWindow === '1') {
+            window.open('z5_okienko_1.html', 'okienko_z5_1', "toolbar=no,directories=no,menubar=no,height=300,width=200,top=320,left=50");
+        } else if (whichWindow === '2') {
+            window.open('z5_okienko_2.html', 'okienko_z5_2', "toolbar=no,directories=no,menubar=no,height=300,width=200,top=320,left=300");
+        } else if (whichWindow === '3') {
+            window.open('z5_okienko_3.html', 'okienko_z5_3', "toolbar=no,directories=no,menubar=no,height=300,width=200,top=320,left=550");
+        } else if (whichWindow === '4') {
+            window.open('z5_okienko_4.html', 'okienko_z5_4', "toolbar=no,directories=no,menubar=no,height=300,width=200,top=320,left=800");
+        }
+    }
+</script>
+</html>
