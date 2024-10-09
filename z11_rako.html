@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div style="color:purple;font-size:50px;">
+            <script language="JavaScript">
+                do{
+                    var D1_rak=prompt("Dzien 1 = ","");
+                    var a=parseFloat(D1_rak);
+                }while(a < 1 || a > 31);
+                do{
+                    var D2_rak=prompt("Dzien 2 = ","");
+                    var b=parseFloat(D2_rak);
+                }while(b < 1 || b > 31 || a >= b);
+                var suma;
+                var liczbaSekund = 86400
+                suma=(b - a)*liczbaSekund;
+                document.write("Ilość sekund = (Dzien 2 - Dzien 1) * liczba sekund = ("+b+" - "+a+") * "+liczbaSekund+" = "+suma+" sekund<br>");
+            </script>
+        </div>
+    </body>
+</html>

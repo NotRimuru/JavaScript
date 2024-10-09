@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div style="color:purple;font-size:50px;">
+            <script language="JavaScript">
+                do{
+                    var D1_rak=prompt("Dzien 1 = ","");
+                    var a=parseFloat(D1_rak);
+                }while(a < 1 || a > 31);
+                do{
+                    var G1_rak=prompt("Godzina 1 = ","");
+                    var b=parseFloat(G1_rak);
+                }while(b < 0 || b > 24);
+                do{
+                    var D2_rak=prompt("Dzien 2 = ","");
+                    var c=parseFloat(D2_rak);
+                }while(c < 1 || c > 31 || a >= c);
+                
+                do{
+                    var G2_rak=prompt("Godzina 2 = ","");
+                    var d=parseFloat(G2_rak);
+                }while(d < 0 || d > 24);
+                var suma;
+                var dzienSek = 86400;
+                var godzSek = 3600;
+                suma = (c * dzienSek - d * godzSek) - (a * dzienSek - b * godzSek);
+                document.write("Ilość sekund = ((Dzien 2 * ilosc sekund) - (Godzina 2 * ilosc sekund)) - ((Dzien 1 * ilosc sekund) - (Godzina 1 * ilosc sekund)) = (("+c+" * "+dzienSek+") - (" +d+" * "+godzSek+")) - (("+a+" * "+dzienSek+") - (" +b+ " * "+godzSek+")) = "+suma+" sekund<br>");
+            </script>
+        </div>
+    </body>
+</html>
