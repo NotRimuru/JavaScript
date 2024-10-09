@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>Rakoczy 2P</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+            }
+            h2 {
+                font-size: 2cm;
+                color: red;
+            }
+            h3 {
+                font-size: 1.5cm;
+                margin-top: 20px;
+            }
+            .container {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .buttons-group {
+                margin-bottom: 20px;
+            }
+        </style>
+        <script language="JavaScript">
+            function WinOpen(arg) {
+                window.open(`${arg}.html`, "okienko", "toolbar=no,directories=no,menubar=no,height=480,width=700,top=200,left=400");
+            }
+            function Zad5WinOpen(arg) {
+                window.open(`${arg}.html`, "okienko", "toolbar=no,directories=no,menubar=no,height=250,width=950,top=800,left=50");
+            }
+            function okno_zamknij() {
+                window.close();
+            }
+        </script> 
+    </head> 
+    <body>
+        <h2>Szkielet zaliczeniowy JavaScript Aleksander Rakoczy 2P</h2>
+
+        <div class="container">
+            <h3>Zadania</h3>
+            <div class="buttons-group">
+                <input type="button" value="zadanie1-rakoczy" name="zadanie1" onclick="WinOpen('z1_rako')">
+                <input type="button" value="zadanie2-rakoczy" name="zadanie2" onclick="WinOpen('z2_rako')">
+                <input type="button" value="zadanie3-rakoczy" name="zadanie3" onclick="WinOpen('z3_rako')">
+                <input type="button" value="zadanie4-rakoczy" name="zadanie4" onclick="WinOpen('z4_rako')">
+                <input type="button" value="zadanie5-rakoczy" name="zadanie5" onclick="Zad5WinOpen('z5_rako')">
+                <input type="button" value="zadanie6-rakoczy" name="zadanie6" onclick="WinOpen('z6_rako')">
+                <input type="button" value="zadanie7-rakoczy" name="zadanie7" onclick="WinOpen('z7_rako')">
+                <input type="button" value="zadanie8-rakoczy" name="zadanie8" onclick="WinOpen('z8_rako')">
+                <input type="button" value="zadanie9-rakoczy" name="zadanie9" onclick="WinOpen('z9_rako')">
+                <input type="button" value="zadanie10-rakoczy" name="zadanie10" onclick="WinOpen('z10_rako')">
+                <input type="button" value="zadanie11-rakoczy" name="zadanie11" onclick="WinOpen('z11_rako')">
+                <input type="button" value="zadanie12-rakoczy" name="zadanie12" onclick="WinOpen('z12_rako')">
+                <input type="button" value="zadanie13-rakoczy" name="zadanie13" onclick="WinOpen('z13_rako')">
+                <input type="button" value="zadanie14-rakoczy" name="zadanie14" onclick="WinOpen('z14_rako')">
+                <input type="button" value="zadanie15-rakoczy" name="zadanie15" onclick="WinOpen('z15_rako')">
+                <input type="button" value="zadanie16-rakoczy" name="zadanie16" onclick="WinOpen('z16_rako')">
+                <input type="button" value="zadanie18-rakoczy" name="zadanie18" onclick="WinOpen('z18_rako')">
+                <input type="button" value="zadanie19-rakoczy" name="zadanie19" onclick="WinOpen('z19_rako')">
+            </div>
+
+            <h3>Kody do zadań</h3>
+            <div class="buttons-group">
+                <input type="button" value="kod11-rakoczy" name="kod11" onclick="WinOpen('z11_rako_kod')">
+                <input type="button" value="kod12-rakoczy" name="kod12" onclick="WinOpen('z12_rako_kod')">
+                <input type="button" value="kod13-rakoczy" name="kod13" onclick="WinOpen('z13_rako_kod')">
+                <input type="button" value="kod14-rakoczy" name="kod14" onclick="WinOpen('z14_rako_kod')">
+                <input type="button" value="kod15-rakoczy" name="kod15" onclick="WinOpen('z15_rako_kod')">
+                <input type="button" value="kod16-rakoczy" name="kod16" onclick="WinOpen('z16_rako_kod')">
+            </div>
+
+            <input type="button" value="zamknij okno" onclick="okno_zamknij()">
+        </div>
+    </body> 
+</html>
