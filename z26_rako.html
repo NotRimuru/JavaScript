@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <script language="JavaScript">
+            function Ob(a, b, h)
+            {
+                return a + b + Math.hypot(h, Math.abs(a - b) / 2) * 2
+            }
+            function Pole(a, b, h)
+            {
+                return (a + b) * h / 2;
+            }
+
+            const readProperty = (id) => {
+                return +document.getElementById(id)?.value;
+            }
+
+            function listener() {
+                const [a, b, h] = ["a", "b", "h"].map((key) => readProperty(key))
+
+                document.getElementById("pokaz1").innerHTML = `Pole= ${Pole(a, b, h)}`
+            };
+        </script>
+    </head>
+    <body>
+        <br><br>
+        <div name="formularz" onsubmit="Ob(this.a.value, this.b.value, this.h.value); Pole(this.a.value, this.b.value, this.h.value);return false">
+            Podaj a=
+            <input size="6" name="a">
+            cm<br>
+            Podaj b=
+            <input size="6" name="b">
+            cm<br>
+            Podaj h=
+            <input size="6" name="h">
+            cm<br><br>
+            <input onclick="listener()" value="oblicz">
+        </div>
+        <table>
+            <tr id="pokaz1"></tr>
+            <tr id="pokaz2"></tr>
+        </table>
+    </body>
+</html>

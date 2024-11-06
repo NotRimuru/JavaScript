@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Przykład obliczenia V i Pc walca</title>
+        <script language="JavaScript">
+            function Ob(a,b)
+            {
+                a_rak=parseFloat(a)
+                b_rak=parseFloat(b)
+                Ob_rak=(a_rak * 2) + (b_rak * 2)
+                pokaz1.innerHTML="Ob="+Ob_rak.toFixed(2)+" cm"+"<br>"; /* do tabeli */
+            }
+            function Pole(a,b)
+            {
+                a_rak=parseFloat(a)
+                b_rak=parseFloat(b)
+                Pole_rak=a_rak * b_rak
+                pokaz2.innerHTML="Pole="+Pole_rak.toFixed(2)+"cm^2";
+            }
+        </script>
+    </head>
+    <body>
+        Pobliczanie Ob i Pole walca
+        <br><br>
+        <form name="formularz" action="..." onsubmit="Ob(this.podloga.value,this.wysokosc.value); Pole(this.podloga.value,this.wysokosc.value);return false">
+            Podaj a=
+            <input size="6" name="podloga">
+            Podaj b=
+            <input size="6" name="wysokosc">
+            <br><br>
+            <input TYPE="submit" Value="oblicz" >
+        </form>
+        <table>
+            <tr id="pokaz1"></tr>
+            <tr id="pokaz2"></tr>
+        </table>
+    </body>
+</html>

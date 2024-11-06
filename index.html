@@ -1,77 +1,237 @@
-<html>
-    <head>
-        <title>Rakoczy 2P</title>
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-                margin: 20px;
-            }
-            h2 {
-                font-size: 2cm;
-                color: red;
-            }
-            h3 {
-                font-size: 1.5cm;
-                margin-top: 20px;
-            }
-            .container {
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .buttons-group {
-                margin-bottom: 20px;
-            }
-        </style>
-        <script language="JavaScript">
-            function WinOpen(arg) {
-                window.open(`${arg}.html`, "okienko", "toolbar=no,directories=no,menubar=no,height=480,width=700,top=200,left=400");
-            }
-            function Zad5WinOpen(arg) {
-                window.open(`${arg}.html`, "okienko", "toolbar=no,directories=no,menubar=no,height=250,width=950,top=800,left=50");
-            }
-            function okno_zamknij() {
-                window.close();
-            }
-        </script> 
-    </head> 
-    <body>
-        <h2>Szkielet zaliczeniowy JavaScript Aleksander Rakoczy 2P</h2>
+<!DOCTYPE html>
+<!-- saved from url=(0028)https://wixrek.github.io/js/ -->
+<html lang="pl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rakzewski 2P</title>
+    <style>
+        thead{
+            text-align: center;
+            font-size: xx-large;
+        }
+        table{
+            margin: auto;
+            width: 50%;
+            color: black;
+            background-color: FF99FF;
+        }
 
-        <div class="container">
-            <h3>Zadania</h3>
-            <div class="buttons-group">
-                <input type="button" value="zadanie1-rakoczy" name="zadanie1" onclick="WinOpen('z1_rako')">
-                <input type="button" value="zadanie2-rakoczy" name="zadanie2" onclick="WinOpen('z2_rako')">
-                <input type="button" value="zadanie3-rakoczy" name="zadanie3" onclick="WinOpen('z3_rako')">
-                <input type="button" value="zadanie4-rakoczy" name="zadanie4" onclick="WinOpen('z4_rako')">
-                <input type="button" value="zadanie5-rakoczy" name="zadanie5" onclick="Zad5WinOpen('z5_rako')">
-                <input type="button" value="zadanie6-rakoczy" name="zadanie6" onclick="WinOpen('z6_rako')">
-                <input type="button" value="zadanie7-rakoczy" name="zadanie7" onclick="WinOpen('z7_rako')">
-                <input type="button" value="zadanie8-rakoczy" name="zadanie8" onclick="WinOpen('z8_rako')">
-                <input type="button" value="zadanie9-rakoczy" name="zadanie9" onclick="WinOpen('z9_rako')">
-                <input type="button" value="zadanie10-rakoczy" name="zadanie10" onclick="WinOpen('z10_rako')">
-                <input type="button" value="zadanie11-rakoczy" name="zadanie11" onclick="WinOpen('z11_rako')">
-                <input type="button" value="zadanie12-rakoczy" name="zadanie12" onclick="WinOpen('z12_rako')">
-                <input type="button" value="zadanie13-rakoczy" name="zadanie13" onclick="WinOpen('z13_rako')">
-                <input type="button" value="zadanie14-rakoczy" name="zadanie14" onclick="WinOpen('z14_rako')">
-                <input type="button" value="zadanie15-rakoczy" name="zadanie15" onclick="WinOpen('z15_rako')">
-                <input type="button" value="zadanie16-rakoczy" name="zadanie16" onclick="WinOpen('z16_rako')">
-                <input type="button" value="zadanie18-rakoczy" name="zadanie18" onclick="WinOpen('z18_rako')">
-                <input type="button" value="zadanie19-rakoczy" name="zadanie19" onclick="WinOpen('z19_rako')">
-            </div>
+        input{
+            border: 1mm solid #510098;
+            border-radius: 10px;
+            padding-top: 3mm;
+            padding-bottom: 3mm;
+            background-color: #b134ff;     
+            width: 5cm;
+            height: 1cm;
+            transition: transform 0.3s ease;
+        }
+        input:hover{
+            background-color: #fb24ff;     
+            transform: scale(1.1);
+        }
 
-            <h3>Kody do zadań</h3>
-            <div class="buttons-group">
-                <input type="button" value="kod11-rakoczy" name="kod11" onclick="WinOpen('z11_rako_kod')">
-                <input type="button" value="kod12-rakoczy" name="kod12" onclick="WinOpen('z12_rako_kod')">
-                <input type="button" value="kod13-rakoczy" name="kod13" onclick="WinOpen('z13_rako_kod')">
-                <input type="button" value="kod14-rakoczy" name="kod14" onclick="WinOpen('z14_rako_kod')">
-                <input type="button" value="kod15-rakoczy" name="kod15" onclick="WinOpen('z15_rako_kod')">
-                <input type="button" value="kod16-rakoczy" name="kod16" onclick="WinOpen('z16_rako_kod')">
-            </div>
+        body {
+            font-family: Arial, sans-serif;
+            margin-left: 10%;
+            margin-right: 10%;
+            background: linear-gradient(38deg, rgb(84, 0, 219) 5%, rgb(187, 0, 255) 100%);
+        }
+        .buttons-group {
+            margin: auto;
+            padding-bottom: 20px;
+            background: linear-gradient(241deg, rgba(162,0,255,1) 56%, rgba(201,0,255,1) 100%);
+            border: #510098 solid;
+            border-radius: 20px;
+            width: 50%;
+            margin-bottom: 20px;
+        }
+        h2{
+            text-align: center;
+            font-size: xx-large;
+            color: black;
+        }
+        h{
+            font-size: large;
+            color: #9933FF;
+        }
+    </style>
+    <script language="JavaScript">
+        function WinOpen(arg) {
+            window.open(`${arg}.html`, "okienko", "toolbar=no,directories=no,menubar=no,height=480,width=700,top=200,left=400");
+        }
+        function okno_zamknij() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+<h2>Szkielet zaliczeniowy JavaScript Aleksander Rakoczy 2P</h2>
+<div class="buttons-group">
+    <table>
+        <thead>
+            <tr>
+                <td colspan="2">
+                    <h3>Zadania</h3>
+                </td> 
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="zadanie1-rak" name="zadanie1" onclick="WinOpen(z1_rak)">
+                </td>
+                <td>
+                    <input type="button" value="zadanie2-rak" name="zadanie2" onclick="WinOpen(z2_rak)">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="zadanie3-rak" name="zadanie3" onclick="WinOpen(z3_rak)">
+                </td>
+                <td>
+                    <input type="button" value="zadanie4-rak" name="zadanie4" onclick="WinOpen(z4_rak)">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="zadanie5-rak" name="zadanie5" onclick="WinOpen(z5_rak)">
+                </td>
+                <td>
+                    <input type="button" value="zadanie6-rak" name="zadanie6" onclick="WinOpen(z6_rak)">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="zadanie7-rak" name="zadanie7" onclick="WinOpen(z7_rak)">
+                </td>
+                <td>
+                    <input type="button" value="zadanie8-rak" name="zadanie8" onclick="WinOpen(z8_rak)">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="zadanie9-rak" name="zadanie9" onclick="WinOpen(z9_rak)">
+                </td>
+                <td>
+                    <input type="button" value="zadanie10-rak" name="zadanie10" onclick="WinOpen(z10_rak)">
+                </td>
+            </tr>
+            <tr> 
+                <td>
+                    <input type="button" value="zadanie11-rak" name="zadanie11" onclick="WinOpen(z11_rak)">
+                </td>
+                <td>
+                    <input type="button" value="zadanie12-rak" name="zadanie12" onclick="WinOpen(z12_rak)">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="zadanie13-rak" name="zadanie13" onclick="WinOpen(z13_rak)">
+                </td>
+                <td>
+                    <input type="button" value="zadanie14-rak" name="zadanie14" onclick="WinOpen(z14_rak)">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="zadanie15-rak" name="zadanie15" onclick="WinOpen(z15_rak)">
+                </td>
+                <td>
+                    <input type="button" value="zadanie16-rak" name="zadanie16" onclick="WinOpen(z16_rak)">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="zadanie17-rak" name="zadanie17" onclick="WinOpen(z17_rak)">
+                </td>
+                <td>
+                    <input type="button" value="zadanie18-rak" name="zadanie18" onclick="WinOpen(z18_rak)">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="zadanie19-rak" name="zadanie19" onclick="WinOpen(z19_rak)">
+                </td>
+                <td>
+                    <input type="button" value="zadanie20-rak" name="zadanie20" onclick="WinOpen(z20_rak)">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="zadanie21-rak" name="zadanie21" onclick="WinOpen(z21_rak)">
+                </td>
+            </tr>
+        </thead>
+    </table>
+</div>
+<div class="buttons-group">
+    <table>
+        <thead>
+            <tr>
+                <td colspan="2">
+                    <h3>Kod Do Zadan</h3>
+                </td> 
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="zadanie11 kod-rak" name="zadanie11-kod" onclick="WinOpen(z11_kod)">
+                </td>
+                <td>
+                    <input type="button" value="zadanie12 kod-rak" name="zadanie12-kod" onclick="WinOpen(z12_kod)">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="zadanie13 kod-rak" name="zadanie13-kod" onclick="WinOpen(z13_kod)">
+                </td>
+                <td>
+                    <input type="button" value="zadanie14 kod-rak" name="zadanie14-kod" onclick="WinOpen(z14_kod)">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="zadanie15 kod-rak" name="zadanie15-kod" onclick="WinOpen(z15_kod)">
+                </td>
+                <td>
+                    <input type="button" value="zadanie16 kod-rak" name="zadanie16-kod" onclick="WinOpen(z16_kod)">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="zadanie18 kod-rak" name="zadanie18-kod" onclick="WinOpen(z18_kod)">
+                </td>
+                <td>
+                    <input type="button" value="zadanie19 kod-rak" name="zadanie19-kod" onclick="WinOpen(z19_kod)">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="zadanie20 kod-rak" name="zadanie20-kod" onclick="WinOpen(z20_kod)">
+                </td>
+                <td>
+                    <input type="button" value="zadanie21 kod-rak" name="zadanie21-kod" onclick="WinOpen(z21_kod)">
+                </td>
+            </tr>
+        </thead>
+    </table>
+</div>
+<div class="buttons-group">
+    <table>
+        <thead>
+            <tr>
+                <td>
+                    <p>przycisk zamykający okno</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        <input type="button" value="zamknij okno" onclick="okno_zamknij()">
+                    </p>
+                </td>
+            </tr>
+        </thead>
+    </table>
+</div>
 
-            <input type="button" value="zamknij okno" onclick="okno_zamknij()">
-        </div>
-    </body> 
-</html>
+
+</body></html>
