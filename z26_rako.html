@@ -1,43 +1,37 @@
-<html>
-    <head>
-        <script language="JavaScript">
-            function Ob(a, b, h)
-            {
-                return a + b + Math.hypot(h, Math.abs(a - b) / 2) * 2
-            }
-            function Pole(a, b, h)
-            {
-                return (a + b) * h / 2;
-            }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div>
+        <input type="number" id="gorna" step="0.01" placeholder="Górna podstawa">
+        <input type="number" id="dolna" step="0.01" placeholder="Dolna podstawa">
+        <input type="number" id="h" step="0.01" placeholder="Wysokość">
+        <button type="button" onclick="Pole_rakoczy()">Oblicz pole</button>
+        <button type="button" onclick="Obwod_rakoczy()">Oblicz obwód</button>
+        <br>
+        <br>
+        <p id="result_pole"></p>
+        <p id="result_obwod"></p>
+    </div>
+    <script>
+        function Pole_rakoczy() {
+            let gorna_podstawa = +document.getElementById("gorna").value;
+            let dolna_podstawa = +document.getElementById("dolna").value;
+            let wysokosc = +document.getElementById("h").value;
+            document.getElementById("result_pole").innerHTML = `Pole: ${Number((Math.abs(gorna_podstawa+dolna_podstawa)*wysokosc/2)).toFixed(2)} cm^2`;
+        }
 
-            const readProperty = (id) => {
-                return +document.getElementById(id)?.value;
-            }
+        function Obwod_rakoczy() {
+            let gorna_podstawa = +document.getElementById("gorna").value;
+            let dolna_podstawa = +document.getElementById("dolna").value;
+            let wysokosc = +document.getElementById("h").value;
+            let bok = Math.sqrt(Math.pow((dolna_podstawa-gorna_podstawa/2), 2) + Math.pow(wysokosc, 2)).toFixed(2);
 
-            function listener() {
-                const [a, b, h] = ["a", "b", "h"].map((key) => readProperty(key))
-
-                document.getElementById("pokaz1").innerHTML = `Pole= ${Pole(a, b, h)}`
-            };
-        </script>
-    </head>
-    <body>
-        <br><br>
-        <div name="formularz" onsubmit="Ob(this.a.value, this.b.value, this.h.value); Pole(this.a.value, this.b.value, this.h.value);return false">
-            Podaj a=
-            <input size="6" name="a">
-            cm<br>
-            Podaj b=
-            <input size="6" name="b">
-            cm<br>
-            Podaj h=
-            <input size="6" name="h">
-            cm<br><br>
-            <input onclick="listener()" value="oblicz">
-        </div>
-        <table>
-            <tr id="pokaz1"></tr>
-            <tr id="pokaz2"></tr>
-        </table>
-    </body>
+            document.getElementById("result_obwod").innerHTML = `Bok: ${bok}cm <br>Obwód: ${Number(gorna_podstawa+dolna_podstawa+2*bok).toFixed(2)} cm`;
+        }
+    </script>
+</body>
 </html>
