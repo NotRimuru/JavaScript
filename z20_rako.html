@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <p id="result"></p>
+    </body>
+    <script>
+        var xa_rak = parseFloat(prompt("Podaj xa"))
+        var ya_rak = parseFloat(prompt("Podaj ya"))
+        var xb_rak = parseFloat(prompt("Podaj xb"))
+        var yb_rak = parseFloat(prompt("Podaj yb"))
+        var xc_rak = parseFloat(prompt("Podaj xc"))
+        var yc_rak = parseFloat(prompt("Podaj yc"))
+        document.getElementById("result").innerHTML = `AB=${AB_rak().toFixed(2)} BC=${BC_rak().toFixed(2)} AC=${AC_rak().toFixed(2)}`;
+
+        function AB_rak() {
+            return Math.sqrt(Math.pow(xb_rak-xa_rak, 2) + Math.pow(yb_rak-ya_rak,2));
+        }
+
+        function BC_rak() {
+            return Math.sqrt(Math.pow(xc_rak-xb_rak, 2) + Math.pow(yc_rak-yb_rak,2));
+        }
+
+        function AC_rak() {
+            return Math.sqrt(Math.pow(xc_rak-xa_rak, 2)+ Math.pow(yc_rak-ya_rak,2));
+        }
+    </script>
+</html>
